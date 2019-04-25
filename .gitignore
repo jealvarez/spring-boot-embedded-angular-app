@@ -1,0 +1,23 @@
+# OS X Files
+.DS_Store
+
+# Eclipse Project Files
+.classpath
+.project
+.settings/
+
+# Intellij Project Files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Gradle Files
+.gradle/
+bin/
+build/
+settings.gradle
+
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+lombok.config
