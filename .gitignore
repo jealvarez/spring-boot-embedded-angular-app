@@ -16,7 +16,6 @@
 .gradle/
 bin/
 build/
-settings.gradle
 
 .gradle
 !gradle/wrapper/gradle-wrapper.jar
