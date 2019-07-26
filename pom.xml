@@ -94,7 +94,19 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<executions>
 					<execution>
-						<id>Generate UI</id>
+						<id>npm-install</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>npm</executable>
+							<workingDirectory>${basedir}/spring-angular-ui</workingDirectory>
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>build-ui</id>
 						<phase>prepare-package</phase>
 						<goals>
 							<goal>exec</goal>
