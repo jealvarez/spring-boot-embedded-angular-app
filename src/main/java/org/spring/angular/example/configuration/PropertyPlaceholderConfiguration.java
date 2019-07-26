@@ -13,9 +13,7 @@ public class PropertyPlaceholderConfiguration {
     public PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
         final PropertyPlaceholderConfigurer propertyPlaceholderConfigurer = new PropertyPlaceholderConfigurer();
         propertyPlaceholderConfigurer.setIgnoreResourceNotFound(true);
-        propertyPlaceholderConfigurer.setLocations(new Resource[] {
-                new FileSystemResource("/opt/apps/spring-mybatis-example/conf-override.properties"),
-        });
+        propertyPlaceholderConfigurer.setLocations(new FileSystemResource("/opt/apps/spring-mybatis-example/conf-override.properties"));
 
         return propertyPlaceholderConfigurer;
     }

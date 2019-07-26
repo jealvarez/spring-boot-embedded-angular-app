@@ -1,15 +1,13 @@
 package org.spring.angular.example.domain;
 
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Builder
 public class AuthorityGroup {
 
-    private long id;
-    private String name;
+    private final long id;
+    private final String name;
 
 }

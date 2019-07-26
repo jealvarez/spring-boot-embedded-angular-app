@@ -44,13 +44,13 @@ public class AuthorityGroupController {
 
     @PostMapping
     @ResponseStatus(NO_CONTENT)
-    public void create(@RequestBody AuthorityGroup authorityGroup) {
+    public void create(@RequestBody final AuthorityGroup authorityGroup) {
         authorityGroupService.create(authorityGroup);
     }
 
     @PutMapping
     @ResponseStatus(NO_CONTENT)
-    public void update(@RequestBody AuthorityGroup authorityGroup) {
+    public void update(@RequestBody final AuthorityGroup authorityGroup) {
         authorityGroupService.update(authorityGroup);
     }
 
@@ -63,9 +63,9 @@ public class AuthorityGroupController {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> exceptionHandler(final Exception exception) {
-        final ErrorResponse errorResponse = ErrorResponse.anErrorResponse()
-                                                         .withErrorCode(INTERNAL_SERVER_ERROR.value())
-                                                         .withMessage(exception.getMessage())
+        final ErrorResponse errorResponse = ErrorResponse.builder()
+                                                         .errorCode(INTERNAL_SERVER_ERROR.value())
+                                                         .message(exception.getMessage())
                                                          .build();
         return new ResponseEntity<>(errorResponse, INTERNAL_SERVER_ERROR);
     }

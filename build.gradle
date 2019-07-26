@@ -18,7 +18,7 @@ repositories {
 
 dependencyManagement {
   imports {
-    mavenBom 'org.springframework.boot:spring-boot-starter-parent:2.1.2.RELEASE'
+    mavenBom 'org.springframework.boot:spring-boot-starter-parent:2.1.6.RELEASE'
   }
 }
 
@@ -29,18 +29,15 @@ dependencies {
   compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
   compile 'org.flywaydb:flyway-core'
   compile 'org.projectlombok:lombok'
-  compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.0'
-  
+  compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1'
+
   compile 'ch.qos.logback:logback-classic:1.2.3'
   compile 'org.slf4j:log4j-over-slf4j'
   compile 'org.slf4j:jcl-over-slf4j:1.7.26'
   compile 'org.slf4j:jul-to-slf4j:1.7.26'
   compile 'org.slf4j:slf4j-api:1.7.26'
-  compile 'org.apache.commons:commons-lang3:3.8.1'
+  compile 'org.apache.commons:commons-lang3:3.9'
   compile 'mysql:mysql-connector-java'
-  
-  testCompile 'junit:junit:4.12'
-  testCompile 'org.springframework:spring-test'
 
 }
 
