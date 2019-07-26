@@ -24,3 +24,4 @@ lombok.config
 out
 
 target
+package-lock.json
